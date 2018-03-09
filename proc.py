@@ -38,4 +38,5 @@ def arb(player_move, machine_move):
         }
 
 def choose_move(spun_move):
-    return cycle(spun_move, 1, 2)
+    result =  cycle(spun_move, 1, 2)
+    return result

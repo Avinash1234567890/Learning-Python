@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sqlite3 as sql
 from random import randint
-from translate import str_to_num
+from translate import *
 from proc import *
 
 move_list = [0, 1, 2]
@@ -46,5 +46,6 @@ while(42):
 
     choice = choose_move(spin(calc_freq(move_list)))
     result = arb(move,choice)
-    print(result)
+    end_score = "The winner is " + result["winner"] + " with " + num_to_str(result["winning move"])
+    print(end_score)
 connection.close()
