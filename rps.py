@@ -13,11 +13,11 @@ def add_move(move):
 def spin(percent):
     rand = randint(1,100)
 
-    if(rand =< percent[0]):
+    if(rand <= percent[0]):
         return 0
-    elif(rand =< percent[0] + percent[1]):
+    elif(rand <= percent[0] + percent[1]):
         return 1
-    elif(rand =< percent[0] + percent[1] + percent[2]):
+    elif(rand <= percent[0] + percent[1] + percent[2]):
         return 2
     else:
         raise Exception()
