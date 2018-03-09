@@ -7,7 +7,6 @@ def calc_freq(move_list):
 
     for move in move_list:
         count[move] += 1
-    return count
     total = 0
     for i in range(len(count)):
         total += count[i]
