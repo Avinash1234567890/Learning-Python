@@ -8,6 +8,15 @@ def calc_freq(move_list):
     for move in move_list:
         count[move] += 1
     return count
+    total = 0
+    for i in range(len(count)):
+        total += count[i]
+    percent = []
+    for j in range(len(count)):
+        frac = float((count[j] / total) * 100)
+        percent.insert(j, frac)
+    return percent
+
 
 def arb(player_move, machine_move):
     if(cycle(player_move, 1, 3) == machine_move):
