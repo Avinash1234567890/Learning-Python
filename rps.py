@@ -6,12 +6,12 @@ import translate as trans
 def spin(percent):
     rand = random.randint(1,100)
 
-    if rand =< percent["rock"]:
-        return "rock"
-    elif rand =< percent["rock"]+percent["paper"]:
-        return "paper"
-    elif: rand =< percent["rock"]+percent["paper"]+percent["scissors"]:
-        return "scissors"
+    if(rand =< percent[0]):
+        return 0
+    elif(rand =< percent[0]+percent[1]):
+        return 1
+    elif(rand =< percent[0]+percent[1]+percent[2]):
+        return 2
     else:
         return "error"
 
