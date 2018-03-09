@@ -2,12 +2,12 @@
 import sqlite3 as sql
 from random import randint
 from translate import str_to_num
-from proc import calc_freq, arb
+from proc import *
 
 move_list = [0, 1, 2]
 connection = sql.connect(":memory:") # HACK: Use a database file to keep permanent changes
 db = connection.cursor()
-db.execute("DROP TABLE IF EXISTS rps") # DEBUG
+db.execute("DROP TABLE IF EXISTS rps") # NOTE: resets table every run; to save, don't use this line
 db.execute("CREATE TABLE rps (move)")
 for val in move_list:
     db.execute("INSERT INTO rps VALUES (?)", (val,))
@@ -44,6 +44,7 @@ while(42):
 
     add_move(move)
 
-    choice = spin(calc_freq(move_list))
+    choice = choose_move(spin(calc_freq(move_list)))
     result = arb(move,choice)
+    print(result)
 connection.close()
