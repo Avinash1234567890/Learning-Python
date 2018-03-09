@@ -13,7 +13,7 @@ def spin(percent):
     elif(rand =< percent[0]+percent[1]+percent[2]):
         return 2
     else:
-        return "error"
+        raise Exception()
 
 move = input("Enter move(rock,paper,or scissors): ")
 
