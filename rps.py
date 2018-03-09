@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-import numpy as np
-from random import *
-from translate import *
-from proc import *
+from random import randint
+from translate import str_to_num
+from proc import calc_freq, arb
 
-move_list = []
+move_list = [0, 1, 2]
 
 def add_move(move):
-    move_list.append(move)
-    return move_list
+    move_list.append(int(move))
 
 def spin(percent):
     rand = randint(1,100)
