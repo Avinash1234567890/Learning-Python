@@ -141,3 +141,4 @@ venv.bak/
 
 ### Custom ignores ###
 *.db
+.vscode/settings.json

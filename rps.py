@@ -35,7 +35,7 @@ def spin(percent):
 
 print("Enter a move for the prompt. Enter 'stop' to stop.")
 while(42):
-    move = input("Enter move(rock,paper,or scissors) :: ")
+    move = input("Enter move (rock,paper,or scissors) :: ")
     if(move == "stop"):
         print("Ending program...")
         break
