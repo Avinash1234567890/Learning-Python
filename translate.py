@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
 
-    if(num == 0):
 def num_to_str(num):
+    if(int(num) == 0):
         return "rock"
-    elif (num == 1):
+    elif (int(num) == 1):
         return "paper"
-    elif (num == 2):
+    elif (int(num) == 2):
         return "scissors"
     else:
-        raise ValueError("The value entered was not between 0 and 2")def str_to_num(str):
+        raise ValueError(num)
+
+def str_to_num(str):
+    if (str(str) == "rock"):
+        return 0
+    elif (str(str) == "paper"):
+        return 1
+    elif (str(str) == "scissors"):
+        return 2
+    else:
+        raise ValueError(str)
