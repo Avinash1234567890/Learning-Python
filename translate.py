@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 
-def num_to_str(num):
-    if(int(num) == 0):
+def num_to_str(move):
+    if(int(move) == 0):
         return "rock"
-    elif (int(num) == 1):
+    elif (int(move) == 1):
         return "paper"
-    elif (int(num) == 2):
+    elif (int(move) == 2):
         return "scissors"
     else:
-        raise ValueError(num)
+        raise ValueError(move)
 
-def str_to_num(str):
-    if (str(str) == "rock"):
+def str_to_num(move):
+    if (str(move) == "rock"):
         return 0
-    elif (str(str) == "paper"):
+    elif (str(move) == "paper"):
         return 1
-    elif (str(str) == "scissors"):
+    elif (str(move) == "scissors"):
         return 2
     else:
-        raise ValueError(str)
+        raise ValueError(move)
